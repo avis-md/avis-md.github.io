@@ -8,7 +8,7 @@
 
 [Windows](undefin.ed)
 
-[MacOS](undefin.ed)
+[MacOS](mac.md)
 
 [GNU Linux](undefin.ed)
 
