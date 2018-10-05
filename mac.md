@@ -1,10 +1,10 @@
 # Steps to install on Mac (temporary)
 
-- scp tekka:/nfs/home/share/mdvis/mac/mdvis.tar.gz [install path]/mdvis.tar.gz
-
 - cd [install path]
 
-- tar -zxvf [install path]/mdvis.tar.gz
+- scp tekka:/nfs/home/share/mdvis/mac/mdvis.tar.gz mdvis.tar.gz
+
+- tar -zxvf mdvis.tar.gz
 
 - mdvis/reg.sh
 
