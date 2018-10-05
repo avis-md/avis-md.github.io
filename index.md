@@ -1,10 +1,10 @@
 # MDVIS
 
-##Downloads
+## Downloads
 
-###Binaries
+### Binaries
 
-####Version 0.01a (alpha)
+#### Version 0.01a (alpha)
 
 [Windows](undefin.ed)
 
@@ -12,11 +12,11 @@
 
 [GNU Linux](undefin.ed)
 
-###Source
+### Source
 [Link to code](undefin.ed)
 
-###Change Log
+### Change Log
 
-####Version 0.01a
+#### Version 0.01a
 
 Hello, world
