@@ -4,7 +4,7 @@
 
 - cd [install path]
 
-- tar -zxvf [install path]
+- tar -zxvf [install path]/mdvis.tar.gz
 
 - mdvis/reg.sh
 
