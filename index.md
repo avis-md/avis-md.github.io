@@ -1,4 +1,4 @@
-# MDVIS
+#MDVIS
 
 ## Downloads
 
@@ -6,11 +6,11 @@
 
 #### Version 0.01a (alpha)
 
-[Windows](undefin.ed)
+[Windows](install/win.md)
 
-[MacOS](mac.md)
+[MacOS](install/mac.md)
 
-[GNU Linux](undefin.ed)
+[GNU Linux](install/lnx.md)
 
 ### Source
 [Link to code](undefin.ed)
