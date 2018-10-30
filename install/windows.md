@@ -8,4 +8,6 @@
 
 - Enjoy :)
 
+＊ If the program won't start, you will have to install the MSVC Redistributable [here](https://aka.ms/vs/15/release/vc_redist.x64.exe).
+
 You can start the program by executing mdvis.exe, or by adding the folder to your PATH and typing `mdvis` in the command prompt.
