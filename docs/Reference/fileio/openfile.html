@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Importing Files &mdash; AViS 0.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Generic SSV Format" href="ssv.html" />
+    <link rel="prev" title="File I/O" href="index.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> AViS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Usage Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">File I/O</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Importing Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing-configurations">Importing Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-trajectories">Importing Trajectories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-remote-files">Importing Remote Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ssv.html">Generic SSV Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../vis/index.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anl/index.html">Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AViS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Usage Reference</a> &raquo;</li>
+        
+          <li><a href="index.html">File I/O</a> &raquo;</li>
+        
+      <li>Importing Files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/reference/fileio/openfile.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="importing-files">
+<h1>Importing Files<a class="headerlink" href="#importing-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="importing-configurations">
+<h2>Importing Configurations<a class="headerlink" href="#importing-configurations" title="Permalink to this headline">¶</a></h2>
+<p>Configuration files contain the atom types, residue groups, as well as initial positions and other information.</p>
+<a class="reference internal image-reference" href="../../_images/icfg.png"><img alt="../../_images/icfg.png" class="align-center" src="../../_images/icfg.png" style="width: 50%;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>), Protein Database(<code class="docutils literal notranslate"><span class="pre">.pdb</span></code>), Lammps(<code class="docutils literal notranslate"><span class="pre">.atom</span></code>), DlPoly(<code class="docutils literal notranslate"><span class="pre">.000</span></code>)</p>
+</div>
+</div>
+<div class="section" id="importing-trajectories">
+<h2>Importing Trajectories<a class="headerlink" href="#importing-trajectories" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/itrj.png"><img alt="../../_images/itrj.png" class="align-center" src="../../_images/itrj.png" style="width: 50%;" /></a>
+<p>Trajectory files contain the coordinates (and velocities) for a certain number of frames.
+The format of the configuration and trajectory files need not be the same; but the atom count must match.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.trr</span></code>)</p>
+</div>
+<div class="section" id="incremental-loading">
+<h3>Incremental loading<a class="headerlink" href="#incremental-loading" title="Permalink to this headline">¶</a></h3>
+<p>For trajectories that come in separate files, AViS can load each file incrementally, thus saving time and data usage.
+The total number of frames to load into memory can be set in the <code class="docutils literal notranslate"><span class="pre">Preferences</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>)</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>To allow for incremental loading, every filename must have matching formats with an incrementing number at the end.
+The number of figures of the number must be constant. The number may increment by more than 1 every frame, but the rate must be constant.</p>
+<p>Example:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mytrajfile000001</span><span class="o">.</span><span class="n">abc</span>
+<span class="n">mytrajfile000003</span><span class="o">.</span><span class="n">abc</span>
+<span class="n">mytrajfile000005</span><span class="o">.</span><span class="n">abc</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importing-remote-files">
+<h2>Importing Remote Files<a class="headerlink" href="#importing-remote-files" title="Permalink to this headline">¶</a></h2>
+<p>AViS can handle remote files the same way as local files.
+You are required to connect to the remote server via SSH.</p>
+<a class="reference internal image-reference" href="../../_images/irmt.png"><img alt="../../_images/irmt.png" class="align-center" src="../../_images/irmt.png" style="width: 50%;" /></a>
+<p>Remote files are downloaded to a temporary folder, and erased as soon as the file is read into memory.
+You can significantly reduce the disk usage by lowering the maximum number of frames loaded into memory; however,
+the playback will be slower as they are fetched on-the-fly.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ssv.html" class="btn btn-neutral float-right" title="Generic SSV Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="File I/O" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Pua Kai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

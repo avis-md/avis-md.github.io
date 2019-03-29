@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Input Nodes &mdash; AViS 0.10 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Scene I/O Nodes" href="nio.html" />
+    <link rel="prev" title="In-built Nodes" href="index.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> AViS
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Usage Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../fileio/index.html">File I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vis/index.html">Visualization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">In-built Nodes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Input Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nio.html">Scene I/O Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmod.html">Modifier Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmisc.html">Miscallenous Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../scripting.html">Scripting Reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">AViS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Usage Reference</a> &raquo;</li>
+        
+          <li><a href="../index.html">Analysis</a> &raquo;</li>
+        
+          <li><a href="index.html">In-built Nodes</a> &raquo;</li>
+        
+      <li>Input Nodes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/reference/anl/nodes/ninput.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="input-nodes">
+<h1>Input Nodes<a class="headerlink" href="#input-nodes" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">ACNT</span></code> and <code class="docutils literal notranslate"><span class="pre">FCNT</span></code> refers to <code class="docutils literal notranslate"><span class="pre">atom</span> <span class="pre">count</span></code> and <code class="docutils literal notranslate"><span class="pre">frame</span> <span class="pre">count</span></code> respectively.</p>
+</div>
+<div class="section" id="particle-data">
+<h2>Particle Data<a class="headerlink" href="#particle-data" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/pdata.png" src="../../../_images/pdata.png" />
+<p>Options</p>
+<ul class="simple">
+<li>Filter (Dropdown multiple-select)</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Value</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>None</td>
+<td>Use data from all atoms</td>
+</tr>
+<tr class="row-odd"><td>Visible</td>
+<td>Only use data from visible atoms</td>
+</tr>
+<tr class="row-even"><td>Clipped</td>
+<td>Only use data from atoms visible through <code class="docutils literal notranslate"><span class="pre">clipping</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Output sockets</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="16%" />
+<col width="17%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Shape</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Positions</td>
+<td>list(2d)</td>
+<td>ACNT, 3</td>
+<td>Atom positions for current frame</td>
+</tr>
+<tr class="row-odd"><td>Velocities</td>
+<td>list(2d)</td>
+<td>ACNT, 3</td>
+<td>Atom velocities for current frame</td>
+</tr>
+<tr class="row-even"><td>Positions (All)</td>
+<td>list(3d)</td>
+<td>FCNT, ACNT, 3</td>
+<td>Atom positions for all frames</td>
+</tr>
+<tr class="row-odd"><td>Velocities (All)</td>
+<td>list(3d)</td>
+<td>FCNT, ACNT, 3</td>
+<td>Atom velocities for all frames</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="system-info">
+<h2>System Info<a class="headerlink" href="#system-info" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/sinfo.png" src="../../../_images/sinfo.png" />
+<p>Output sockets</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="11%" />
+<col width="12%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Shape</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Atom count</td>
+<td>int</td>
+<td>-</td>
+<td>Total number of atoms</td>
+</tr>
+<tr class="row-odd"><td>Frame count</td>
+<td>int</td>
+<td>-</td>
+<td>Total number of frames</td>
+</tr>
+<tr class="row-even"><td>Current frame</td>
+<td>int</td>
+<td>-</td>
+<td>Current visible frames</td>
+</tr>
+<tr class="row-odd"><td>Bounding box</td>
+<td>list(1d)</td>
+<td>6</td>
+<td>Simulation box coordinates, in the order of <code class="docutils literal notranslate"><span class="pre">-X,</span> <span class="pre">+X,</span> <span class="pre">-Y,</span> <span class="pre">+Y,</span> <span class="pre">-Z,</span> <span class="pre">+Z</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nio.html" class="btn btn-neutral float-right" title="Scene I/O Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="In-built Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Pua Kai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
