@@ -261,11 +261,11 @@ For example, the connection above can be represented with the paired list below.
 </pre></div>
 </div>
 <p>An adjacency list, on the other hand, stores the indices connected to each index in a table-wise fashion.
-For example, the same connection can be represented with the adjacency list below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>   <span class="mi">1</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">1</span>
-<span class="mi">1</span>   <span class="mi">0</span>  <span class="mi">2</span>  <span class="mi">3</span>
-<span class="mi">2</span>   <span class="mi">1</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">1</span>
-<span class="mi">3</span>   <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">2</span>
+For example, the same connection can be represented with the adjacency list below. Note that each index entry occupies a line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">1</span>
+<span class="mi">0</span>  <span class="mi">2</span>  <span class="mi">3</span>
+<span class="mi">1</span>  <span class="mi">3</span> <span class="o">-</span><span class="mi">1</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </div>
 <p>In this case, the <code class="docutils literal notranslate"><span class="pre">size</span></code> of the list is 3, meaning each index can be connected to a maximum of 3 other indices.

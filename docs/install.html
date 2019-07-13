@@ -161,47 +161,37 @@
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>This section goes through the steps to install on 3 different OSes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The contents for this section will change once the project becomes public.
-For now, the app will only be available to Yasuoka Lab members.</p>
-</div>
 <ol class="arabic simple">
 <li><p>Windows</p></li>
 <li><p>MacOS</p></li>
 <li><p>Linux</p></li>
 </ol>
+<p>You can download the binary <a class="reference external" href="https://github.com/avis-md/avis/releases/">here</a></p>
 <div class="section" id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<p>Open up a command prompt with SSH (you should have it installed, no?) and type the following:</p>
-<ul class="simple">
-<li><p>cd [install path]</p></li>
-<li><p>scp [any tekka gpu]:/nfs/home/share/avis/win/avis.zip avis.zip</p></li>
-<li><p>unzip avis.zip  (by hand if you don’t have unzip installed)</p></li>
-</ul>
-<p>You can start the program by executing avis.exe, or by adding the folder to your PATH and typing <cite>avis</cite> in the command prompt.</p>
+<ol class="arabic simple">
+<li><p>Extract and run the avis installer .exe.</p></li>
+</ol>
+<p>You can start the program by executing avis.exe, or by adding the folder to your PATH and typing <code class="docutils literal notranslate"><span class="pre">avis</span></code> in the command prompt.</p>
+<p>The user folder will be in the <code class="docutils literal notranslate"><span class="pre">C:\Users\[username]\.avis\</span></code> directory.</p>
 </div>
 <div class="section" id="macos">
 <h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
-<p>Open up a terminal and type the following:</p>
-<ul class="simple">
-<li><p>cd [install path]</p></li>
-<li><p>scp [any tekka gpu]:/nfs/home/share/avis/mac/avis.tar.gz avis.tar.gz</p></li>
-<li><p>tar -zxvf avis.tar.gz</p></li>
-<li><p>avis/reg.sh</p></li>
-</ul>
-<p>You can start the program by typing <cite>avis</cite> in the Terminal.</p>
+<ol class="arabic simple">
+<li><p>Extract and copy the avis .app into the Applications folder.</p></li>
+</ol>
+<p>You can start the program from the Applications list, or by typing <code class="docutils literal notranslate"><span class="pre">avis</span></code> in the Terminal.</p>
+<p>The user folder will be in the <code class="docutils literal notranslate"><span class="pre">~/.avis/</span></code> directory.</p>
 </div>
 <div class="section" id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
-<p>Open up a terminal and type the following:</p>
-<ul class="simple">
-<li><p>cd [install path]</p></li>
-<li><p>scp [any tekka gpu]:/nfs/home/share/avis/linux/avis.tar.gz avis.tar.gz</p></li>
-<li><p>tar -zxvf avis.tar.gz</p></li>
-<li><p>avis/reg.sh</p></li>
-</ul>
-<p>You can start the program by typing <cite>avis</cite> in the Terminal.</p>
+<ol class="arabic simple">
+<li><p>Extract the avis package .deb</p></li>
+<li><p>At the parent folder, execute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dpkg</span> <span class="pre">-i</span> <span class="pre">[package_name].deb</span></code></p></li>
+<li><p>If installation fails with dependancy problems, execute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">-f</span> <span class="pre">install</span></code></p></li>
+</ol>
+<p>You can start the program from the Applications list, or by typing <code class="docutils literal notranslate"><span class="pre">avis</span></code> in the Terminal.</p>
+<p>The user folder will be in the <code class="docutils literal notranslate"><span class="pre">~/.avis/</span></code> directory.</p>
 </div>
 </div>
 
