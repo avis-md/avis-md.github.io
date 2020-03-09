@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Importing Files &mdash; AViS 0.10 documentation</title>
+  <title>Importing Files &mdash; AViS 0.12c documentation</title>
   
 
   
@@ -87,6 +87,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot.html">Troubleshooting</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Usage Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">File I/O</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Importing Files</a><ul>
@@ -175,8 +176,15 @@
 <h1>Importing Files<a class="headerlink" href="#importing-files" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="importing-configurations">
 <h2>Importing Configurations<a class="headerlink" href="#importing-configurations" title="Permalink to this headline">¶</a></h2>
-<p>Configuration files contain the atom types, residue groups, as well as initial positions and other information.</p>
+<p>Configuration files contain the atom types, residue groups, as well as initial positions and other information.
+Only a single configuration can be loaded at once.</p>
 <a class="reference internal image-reference" href="../../_images/icfg.png"><img alt="../../_images/icfg.png" class="align-center" src="../../_images/icfg.png" style="width: 50%;" /></a>
+<p>To open a configuration file, either:</p>
+<ul class="simple">
+<li><p>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></p></li>
+<li><p>Drag and drop the file onto the application window <cite>, or</cite></p></li>
+<li><p>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_file</span></code> on a terminal</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>), Protein Database(<code class="docutils literal notranslate"><span class="pre">.pdb</span></code>), Lammps(<code class="docutils literal notranslate"><span class="pre">.atom</span></code>), DlPoly(<code class="docutils literal notranslate"><span class="pre">.000</span></code>)</p>
@@ -186,15 +194,30 @@
 <h2>Importing Trajectories<a class="headerlink" href="#importing-trajectories" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/itrj.png"><img alt="../../_images/itrj.png" class="align-center" src="../../_images/itrj.png" style="width: 50%;" /></a>
 <p>Trajectory files contain the coordinates (and velocities) for a certain number of frames.
-The format of the configuration and trajectory files need not be the same; but the atom count must match.</p>
+The format of the configuration and trajectory files need not be the same; but the atom count / indices must match.
+Only a single trajectory can be loaded at once.</p>
+<p>To open a trajectory file:</p>
+<ul class="simple">
+<li><p>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></p></li>
+<li><p>Drag and drop the file onto the application window <cite>, or</cite></p></li>
+<li><p>From the bottom animation bar, select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Trajectory</span></code> <cite>, or</cite></p></li>
+<li><p>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_configuration_file</span> <span class="pre">name_of_trajectory_file</span></code> on a terminal</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.trr</span></code>)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some formats may contain trajectory data together with the configuration file.
+They may be loaded automatically without this step.</p>
 </div>
 <div class="section" id="incremental-loading">
 <h3>Incremental loading<a class="headerlink" href="#incremental-loading" title="Permalink to this headline">¶</a></h3>
 <p>For trajectories that come in separate files, AViS can load each file incrementally, thus saving time and data usage.
 The total number of frames to load into memory can be set in the <code class="docutils literal notranslate"><span class="pre">Preferences</span></code>.</p>
+<p>To open an incremental trajectory, simply open the <strong>first</strong> file as the configuration file.
+Consecutive frames will be automatically detected and imported. <cite>Do not open / drag-and-drop all the files!</cite></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>)</p>
@@ -208,6 +231,7 @@ The number of figures of the number must be constant. The number may increment b
 <span class="n">mytrajfile000003</span><span class="o">.</span><span class="n">abc</span>
 <span class="n">mytrajfile000005</span><span class="o">.</span><span class="n">abc</span>
 <span class="o">...</span>
+<span class="n">mytrajfile100001</span><span class="o">.</span><span class="n">abc</span>
 </pre></div>
 </div>
 </div>
@@ -218,6 +242,8 @@ The number of figures of the number must be constant. The number may increment b
 <p>AViS can handle remote files the same way as local files.
 You are required to connect to the remote server via SSH.</p>
 <a class="reference internal image-reference" href="../../_images/irmt.png"><img alt="../../_images/irmt.png" class="align-center" src="../../_images/irmt.png" style="width: 50%;" /></a>
+<p>A remote file can be opened by selecting <code class="docutils literal notranslate"><span class="pre">File/Import</span> <span class="pre">Remote</span></code> from the top menu,
+where you may be required to log in to the remote server before choosing the files.</p>
 <p>Remote files are downloaded to a temporary folder, and erased as soon as the file is read into memory.
 You can significantly reduce the disk usage by lowering the maximum number of frames loaded into memory; however,
 the playback will be slower as they are fetched on-the-fly.</p>
@@ -244,7 +270,7 @@ the playback will be slower as they are fetched on-the-fly.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Pua Kai
+        &copy; Copyright 2018~2020, Pua Kai
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Scripting Reference &mdash; AViS 0.10 documentation</title>
+  <title>Scripting Reference &mdash; AViS 0.12c documentation</title>
   
 
   
@@ -87,6 +87,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot.html">Troubleshooting</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Usage Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../fileio/index.html">File I/O</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../vis/index.html">Visualization</a></li>
@@ -179,15 +180,15 @@
 <div class="section" id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p>User-made nodes live in the <code class="docutils literal notranslate"><span class="pre">~/.avis/nodes/</span></code> directory. You can create as many subdirectories at any depth.
-You should not have more than one script with the same filename, regardless of language.</p>
+You should not have more than one script with the same filename in the same language, to avoid confusion.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This section describes common properties amongst languages. Please refer to the actual languages for examples.</p>
 </div>
-<div class="section" id="api">
-<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="format">
+<h3>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
 <p>AViS Accepts these basic data types. They can be either appear single or as an array.</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 42%" />
 <col style="width: 58%" />
@@ -209,7 +210,7 @@ You should not have more than one script with the same filename, regardless of l
 </tr>
 </tbody>
 </table>
-<p>These few things are parsed by the pre-processor. They are all optional except when marked with <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+<p>These few things are parsed by the pre-processor. They are all optional except when stated.</p>
 <ul>
 <li><p>Description</p>
 <blockquote>
@@ -231,13 +232,15 @@ You should not have more than one script with the same filename, regardless of l
 <div><p>A variable which the script sets to display a progress bar on the node.</p>
 </div></blockquote>
 </li>
-<li><p>Entry point*</p>
+<li><p>Entry point <cite>(not optional)</cite></p>
 <blockquote>
 <div><p>The function to be called when the node is executed. It must be a function with no arguments and no return value.</p>
 </div></blockquote>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">Marks</span></code> are the single API format for an AViS script. Each mark is a comment starting with <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> that immediately precedes its target, with no extra spaces or newlines in between.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Marks</span></code> are the single API requirement for an AViS script.
+Each mark is a comment starting with <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> that immediately precedes its target, with no extra spaces or newlines in between.
+AViS does not, and will never require an include library / header, so your code will be entirely portable as the language allows it.</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`@Some Mark`
 This line of code is marked!
@@ -293,7 +296,8 @@ However, code in Fortran should write as normal: advancing the left-est index th
 </div>
 </li>
 </ul>
-<p>Code can be entirely global, or put into a class with the same name as the script. When the code is classed as such, multiple instances of the script can be used for the same graph, without sharing variables.</p>
+<p>The code can be in global scope, or put into a class with the same name as the script.
+When the code is classed as such, multiple instances of the script can be used for the same graph, without sharing variables.</p>
 <div class="section" id="id1">
 <h3>Arrays<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>C-like code uses raw-pointers as dynamic arrays, so you need to know the length of each dimension.
@@ -301,22 +305,22 @@ They can be specified beside the <code class="docutils literal notranslate"><spa
 Length variables can be either: an input or output variable, a variable declared as <code class="docutils literal notranslate"><span class="pre">var</span></code>, or a constant.
 All length variables must be of type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//in cnt</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//@in cnt</span>
 <span class="kt">short</span><span class="o">*</span> <span class="n">takeAnArrayOfSizeCnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="c1">//out cnt 3</span>
+<span class="c1">//@out cnt 3</span>
 <span class="kt">double</span><span class="o">*</span> <span class="n">andReturnAnArrayOfSizeCntX3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<span class="c1">//in</span>
+<span class="c1">//@in</span>
 <span class="kt">int</span> <span class="n">birdCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="c1">//out numberOfBirds numberOfEggs</span>
+<span class="c1">//@out numberOfBirds numberOfEggs</span>
 <span class="kt">double</span><span class="o">*</span> <span class="n">eggSizes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="c1">//var</span>
+<span class="c1">//@var</span>
 <span class="kt">int</span> <span class="n">numberOfEggs</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>For multi-dimensional arrays, the items are arranged row-major. That is, the right-est index advances the fastest.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//in a b c</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//@in a b c</span>
 <span class="kt">int</span><span class="o">*</span> <span class="n">myArray</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="c1">//The element at location [x][y][z] can be accessed as below.</span>
@@ -327,12 +331,13 @@ All length variables must be of type <code class="docutils literal notranslate">
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If you want a “safe” way of handling pointers, you can use vectors:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">array</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//@in 100</span>
+<span class="kt">double</span><span class="o">*</span> <span class="n">array</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">_array</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">SetArrays</span><span class="p">()</span> <span class="p">{</span>
    <span class="n">_array</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-   <span class="n">array</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">_array</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+   <span class="n">array</span> <span class="o">=</span> <span class="n">_array</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -381,8 +386,7 @@ OpenMP flags are available.</p>
 </ul>
 <div class="section" id="id2">
 <h3>Arrays<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>AViS uses the NumPy api for Python arrays. So, please use numpy to declare arrays.
-The type of variable is list(ab), where a = dim and b = first character of the element type.</p>
+<p>AViS uses the NumPy api for Python arrays. The type of variable is <code class="docutils literal notranslate"><span class="pre">list(nt)</span></code>, where n = dim and t = first character of the element type.</p>
 <p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
@@ -469,7 +473,7 @@ The type of variable is list(ab), where a = dim and b = first character of the e
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Pua Kai
+        &copy; Copyright 2018~2020, Pua Kai
 
     </p>
   </div>

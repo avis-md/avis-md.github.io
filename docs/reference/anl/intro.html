@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction &mdash; AViS 0.10 documentation</title>
+  <title>Introduction &mdash; AViS 0.12c documentation</title>
   
 
   
@@ -87,6 +87,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot.html">Troubleshooting</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Usage Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../fileio/index.html">File I/O</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../vis/index.html">Visualization</a></li>
@@ -203,6 +204,7 @@ Nodes can be removed with the <code class="docutils literal notranslate"><span c
 <img alt="../../_images/webadd.png" src="../../_images/webadd.png" />
 <p>Connections between nodes can be made by clicking on both input and output sockets of the connection.
 A connection cannot be recursive (a node can only take data from nodes which execute before it).
+However, you can store temporary output on an <code class="docutils literal notranslate"><span class="pre">attribute</span></code> node and read from it in the next execution.
 An output socket can be connected to multiple input sockets.</p>
 <img alt="../../_images/webconn.png" src="../../_images/webconn.png" />
 <p>A connection can be removed by hovering over the name of the socket, and clicking on the <code class="docutils literal notranslate"><span class="pre">disconnect</span></code> button.
@@ -212,7 +214,8 @@ Disconnecting an socket removes all connections from/to that socket.</p>
 <div class="section" id="execution">
 <h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
 <p>Nodes are evaluated top-to-bottom, left-to-right. When executed with <code class="docutils literal notranslate"><span class="pre">Run</span></code>, the graph is evaluated on data from the current visible snapshot frame.
-When executed with <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">all</span></code>, the graph is evaluated <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">frame</span> <span class="pre">count</span></code> times, and the data is cached for playback.</p>
+When executed with <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">all</span></code>, the graph is evaluated <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">frame</span> <span class="pre">count</span></code> times for the whole trajectory, and the data is cached for playback;
+That is, when the trajectory is played back, the values of all intermediate calculations for each visible frame can be inspected from the UI.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When executed with <code class="docutils literal notranslate"><span class="pre">Run</span></code>, all data from the previous <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span></code> is discarded.</p>
@@ -240,7 +243,7 @@ When executed with <code class="docutils literal notranslate"><span class="pre">
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Pua Kai
+        &copy; Copyright 2018~2020, Pua Kai
 
     </p>
   </div>
