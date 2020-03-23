@@ -17,36 +17,34 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
+
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Analysis" href="../anl/index.html" />
     <link rel="prev" title="Visualization Window" href="mainwin.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -178,27 +176,27 @@
 <h1>Visualize Bar<a class="headerlink" href="#visualize-bar" title="Permalink to this headline">¶</a></h1>
 <p>The visualize bar is divided into a few tabs:</p>
 <ul>
-<li><p>Particles tab</p>
+<li><p class="first">Particles tab</p>
 <blockquote>
 <div><p>Controls the list of atoms / proteins / meshes.</p>
 </div></blockquote>
 </li>
-<li><p>Colors</p>
+<li><p class="first">Colors</p>
 <blockquote>
 <div><p>Controls the attributes and coloring of atoms.</p>
 </div></blockquote>
 </li>
-<li><p>Graphics</p>
+<li><p class="first">Graphics</p>
 <blockquote>
 <div><p>Controls the options of realtime-rendering of the scene.</p>
 </div></blockquote>
 </li>
-<li><p>Render</p>
+<li><p class="first">Render</p>
 <blockquote>
 <div><p>Controls the options of offline-rendering (image / video output).</p>
 </div></blockquote>
 </li>
-<li><p>Information</p>
+<li><p class="first">Information</p>
 <blockquote>
 <div><p>Displays the math for the nerds, as well as additional information for selected atoms.</p>
 </div></blockquote>
@@ -208,41 +206,41 @@
 <h2>Particles Tab<a class="headerlink" href="#particles-tab" title="Permalink to this headline">¶</a></h2>
 <p>The particles tab controls the drawing of atoms and proteins.</p>
 <img alt="../../_images/vpart.png" src="../../_images/vpart.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
+<col width="28%" />
+<col width="72%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Button</p></th>
-<th class="head"><p>Function</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Button</th>
+<th class="head">Function</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><img alt="vexp" src="../../_images/vexp.png" /></p></td>
-<td><p>Expands / Collapses the group</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="vexp" src="../../_images/vexp.png" /></td>
+<td>Expands / Collapses the group</td>
 </tr>
-<tr class="row-odd"><td><p><img alt="vsela" src="../../_images/vsela.png" /></p></td>
-<td><p>Selects everything</p></td>
+<tr class="row-odd"><td><img alt="vsela" src="../../_images/vsela.png" /></td>
+<td>Selects everything</td>
 </tr>
-<tr class="row-even"><td><p><img alt="vsel0" src="../../_images/vsel0.png" /></p></td>
-<td><p>Deselects everything</p></td>
+<tr class="row-even"><td><img alt="vsel0" src="../../_images/vsel0.png" /></td>
+<td>Deselects everything</td>
 </tr>
-<tr class="row-odd"><td><p><img alt="vseli" src="../../_images/vseli.png" /></p></td>
-<td><p>Flip selection</p></td>
+<tr class="row-odd"><td><img alt="vseli" src="../../_images/vseli.png" /></td>
+<td>Flip selection</td>
 </tr>
-<tr class="row-even"><td><p><img alt="vbal" src="../../_images/vbal.png" /></p></td>
-<td><p>Changes the draw mode (see <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">Modes</span></code>) of the group / selection</p></td>
+<tr class="row-even"><td><img alt="vbal" src="../../_images/vbal.png" /></td>
+<td>Changes the draw mode (see <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">Modes</span></code>) of the group / selection</td>
 </tr>
-<tr class="row-odd"><td><p><img alt="veye" src="../../_images/veye.png" /></p></td>
-<td><p>Shows / Hides the group / selection</p></td>
+<tr class="row-odd"><td><img alt="veye" src="../../_images/veye.png" /></td>
+<td>Shows / Hides the group / selection</td>
 </tr>
 </tbody>
 </table>
 <p>Atoms are grouped into Residues -&gt; Residue ID -&gt; atom name.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Add the protein section</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Add the protein section</p>
 </div>
 </div>
 <div class="section" id="attributes-tab">
@@ -259,68 +257,68 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
 <img alt="../../_images/cols.png" src="../../_images/cols.png" />
 <img alt="../../_images/grads.png" src="../../_images/grads.png" />
 <ul class="simple">
-<li><p>Bond colors</p></li>
+<li>Bond colors</li>
 </ul>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
+<col width="34%" />
+<col width="66%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Custom Bond Colors</p></td>
-<td><p>Use a custom color instead of atom colors</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Custom Bond Colors</td>
+<td>Use a custom color instead of atom colors</td>
 </tr>
-<tr class="row-odd"><td><p>Blend Bond Colors</p></td>
-<td><p>Blend colors inherited from atoms</p></td>
+<tr class="row-odd"><td>Blend Bond Colors</td>
+<td>Blend colors inherited from atoms</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="radii">
 <h3>Radii<a class="headerlink" href="#radii" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 35%" />
-<col style="width: 65%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Scale</p></td>
-<td><p>Multiply all radii values by this value</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Scale</td>
+<td>Multiply all radii values by this value</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="bounding-box">
 <h3>Bounding Box<a class="headerlink" href="#bounding-box" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Draw</p></td>
-<td><p>Draw the Box in 3D view</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Draw</td>
+<td>Draw the Box in 3D view</td>
 </tr>
-<tr class="row-odd"><td><p>Center X, Y, Z</p></td>
-<td><p>Box center coordinates</p></td>
+<tr class="row-odd"><td>Center X, Y, Z</td>
+<td>Box center coordinates</td>
 </tr>
-<tr class="row-even"><td><p>Periodic</p></td>
-<td><p>Wrap around atoms outside the bounding box</p></td>
+<tr class="row-even"><td>Periodic</td>
+<td>Wrap around atoms outside the bounding box</td>
 </tr>
 </tbody>
 </table>
@@ -328,24 +326,24 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
 <div class="section" id="orientation">
 <h3>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Type</p></li>
+<li>Type</li>
 </ul>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 64%" />
+<col width="36%" />
+<col width="64%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Type</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Stretch</p></td>
-<td><p>Stretch atoms based on directions</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Stretch</td>
+<td>Stretch atoms based on directions</td>
 </tr>
-<tr class="row-odd"><td><p>Vector</p></td>
-<td><p>Draw per-atom arrows toward directions</p></td>
+<tr class="row-odd"><td>Vector</td>
+<td>Draw per-atom arrows toward directions</td>
 </tr>
 </tbody>
 </table>
@@ -355,218 +353,218 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
 <h2>Graphics Tab<a class="headerlink" href="#graphics-tab" title="Permalink to this headline">¶</a></h2>
 <p>The graphics tab controls the shading of the scene.</p>
 <ul class="simple">
-<li><p>Shading</p></li>
+<li>Shading</li>
 </ul>
 <img alt="../../_images/gshd.png" src="../../_images/gshd.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 92%" />
+<col width="8%" />
+<col width="92%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Classic</p></td>
-<td><p>The scene is shaded with Lambert and Blinn-Phong lighting. Slightly faster but lower quality.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Classic</td>
+<td>The scene is shaded with Lambert and Blinn-Phong lighting. Slightly faster but lower quality.</td>
 </tr>
-<tr class="row-odd"><td><p>PBR</p></td>
-<td><p>The scene is shaded with Environment Maps. Higher quality but slightly slower and uses more memory.</p></td>
+<tr class="row-odd"><td>PBR</td>
+<td>The scene is shaded with Environment Maps. Higher quality but slightly slower and uses more memory.</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Lighting</p></li>
+<li>Lighting</li>
 </ul>
 <img alt="../../_images/glight.png" src="../../_images/glight.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
+<col width="13%" />
+<col width="87%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Sky</p></td>
-<td><p>Environment type (backgrounds are in the backgrounds/ folder)</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Sky</td>
+<td>Environment type (backgrounds are in the backgrounds/ folder)</td>
 </tr>
-<tr class="row-odd"><td><p>Strength</p></td>
-<td><p>Strength of diffuse lighting (environment strength)</p></td>
+<tr class="row-odd"><td>Strength</td>
+<td>Strength of diffuse lighting (environment strength)</td>
 </tr>
-<tr class="row-even"><td><p>Falloff</p></td>
-<td><p>How much the light gets weaker when further away from the camera</p></td>
+<tr class="row-even"><td>Falloff</td>
+<td>How much the light gets weaker when further away from the camera</td>
 </tr>
-<tr class="row-odd"><td><p>Offset</p></td>
-<td><p>Falloff distance starts from this distance from the camera</p></td>
+<tr class="row-odd"><td>Offset</td>
+<td>Falloff distance starts from this distance from the camera</td>
 </tr>
-<tr class="row-even"><td><p>Specular</p></td>
-<td><p>The strength of reflection. For PBR, diffuse intensity = 1 - specular intensity</p></td>
+<tr class="row-even"><td>Specular</td>
+<td>The strength of reflection. For PBR, diffuse intensity = 1 - specular intensity</td>
 </tr>
-<tr class="row-odd"><td><p>Transparency</p></td>
-<td><p>Transparency ratio</p></td>
+<tr class="row-odd"><td>Transparency</td>
+<td>Transparency ratio</td>
 </tr>
-<tr class="row-even"><td><p>IOR</p></td>
-<td><p>Index of Refraction for transparency</p></td>
+<tr class="row-even"><td>IOR</td>
+<td>Index of Refraction for transparency</td>
 </tr>
-<tr class="row-odd"><td><p>Background</p></td>
-<td><p>Background type: Color, Ambient, Sky</p></td>
+<tr class="row-odd"><td>Background</td>
+<td>Background type: Color, Ambient, Sky</td>
 </tr>
-<tr class="row-even"><td><p>Color</p></td>
-<td><p>Background color</p></td>
+<tr class="row-even"><td>Color</td>
+<td>Background color</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Camera</p></li>
+<li>Camera</li>
 </ul>
 <img alt="../../_images/gcam.png" src="../../_images/gcam.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Follow</p></td>
-<td><p>Camera always centers on target</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Follow</td>
+<td>Camera always centers on target</td>
 </tr>
-<tr class="row-odd"><td><p>Center X,Y,Z</p></td>
-<td><p>Camera axis</p></td>
+<tr class="row-odd"><td>Center X,Y,Z</td>
+<td>Camera axis</td>
 </tr>
-<tr class="row-even"><td><p>Rotation W, Y</p></td>
-<td><p>Camera angle</p></td>
+<tr class="row-even"><td>Rotation W, Y</td>
+<td>Camera angle</td>
 </tr>
-<tr class="row-odd"><td><p>Scale</p></td>
-<td><p>Camera zoom factor</p></td>
+<tr class="row-odd"><td>Scale</td>
+<td>Camera zoom factor</td>
 </tr>
-<tr class="row-even"><td><p>Quality</p></td>
-<td><p>Resolution scaling of the scene</p></td>
+<tr class="row-even"><td>Quality</td>
+<td>Resolution scaling of the scene</td>
 </tr>
-<tr class="row-odd"><td><p>Use Dynamic Quality</p></td>
-<td><p>Use a different resolution scale when moving the camera. Suitable for heavy scenes.</p></td>
+<tr class="row-odd"><td>Use Dynamic Quality</td>
+<td>Use a different resolution scale when moving the camera. Suitable for heavy scenes.</td>
 </tr>
-<tr class="row-even"><td><p>Quality 2</p></td>
-<td><p>Resolution scaling of the scene when the camera is moving</p></td>
+<tr class="row-even"><td>Quality 2</td>
+<td>Resolution scaling of the scene when the camera is moving</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Clipping</p></li>
+<li>Clipping</li>
 </ul>
 <img alt="../../_images/gclp.png" src="../../_images/gclp.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
+<col width="28%" />
+<col width="72%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>None</p></td>
-<td><p>All atoms are shown</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>None</td>
+<td>All atoms are shown</td>
 </tr>
-<tr class="row-odd"><td><p>Slice</p></td>
-<td><p>Only atoms in the bounding plane + thickness is shown</p></td>
+<tr class="row-odd"><td>Slice</td>
+<td>Only atoms in the bounding plane + thickness is shown</td>
 </tr>
-<tr class="row-even"><td><p>Cube</p></td>
-<td><p>Only atoms in the bounding volume is shown</p></td>
+<tr class="row-even"><td>Cube</td>
+<td>Only atoms in the bounding volume is shown</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Effects</p></li>
+<li>Effects</li>
 </ul>
 <p>Additional effects to apply to the scene</p>
 <img alt="../../_images/geff.png" src="../../_images/geff.png" />
 <p>List of effects available:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Glow</p></li>
+<li>Glow</li>
 </ul>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 47%" />
-<col style="width: 53%" />
+<col width="47%" />
+<col width="53%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Threshold</p></td>
-<td><p>Minimum brightness value</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Threshold</td>
+<td>Minimum brightness value</td>
 </tr>
-<tr class="row-odd"><td><p>Radius</p></td>
-<td><p>Blur radius</p></td>
+<tr class="row-odd"><td>Radius</td>
+<td>Blur radius</td>
 </tr>
-<tr class="row-even"><td><p>Strength</p></td>
-<td><p>Additive strength</p></td>
+<tr class="row-even"><td>Strength</td>
+<td>Additive strength</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Ambient Occlusion</p></li>
+<li>Ambient Occlusion</li>
 </ul>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
+<col width="43%" />
+<col width="57%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Samples</p></td>
-<td><p>Number of samples to average</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Samples</td>
+<td>Number of samples to average</td>
 </tr>
-<tr class="row-odd"><td><p>Radius</p></td>
-<td><p>Radius for sampling</p></td>
+<tr class="row-odd"><td>Radius</td>
+<td>Radius for sampling</td>
 </tr>
-<tr class="row-even"><td><p>Strength</p></td>
-<td><p>Darken intensity</p></td>
+<tr class="row-even"><td>Strength</td>
+<td>Darken intensity</td>
 </tr>
-<tr class="row-odd"><td><p>Blur</p></td>
-<td><p>Blur radius before darkening</p></td>
+<tr class="row-odd"><td>Blur</td>
+<td>Blur radius before darkening</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>Depth of Field</p></li>
+<li>Depth of Field</li>
 </ul>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 77%" />
+<col width="23%" />
+<col width="77%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Distance</p></td>
-<td><p>Focal distance from camera</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Distance</td>
+<td>Focal distance from camera</td>
 </tr>
-<tr class="row-odd"><td><p>Aperture</p></td>
-<td><p>Blur amount</p></td>
+<tr class="row-odd"><td>Aperture</td>
+<td>Blur amount</td>
 </tr>
-<tr class="row-even"><td><p>Iterations</p></td>
-<td><p>Number of blur operations. Larger number is slower but reduces artifacts</p></td>
+<tr class="row-even"><td>Iterations</td>
+<td>Number of blur operations. Larger number is slower but reduces artifacts</td>
 </tr>
 </tbody>
 </table>
@@ -575,68 +573,68 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
 <div class="section" id="render-tab">
 <h2>Render Tab<a class="headerlink" href="#render-tab" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>To Image (GLSL)</p></li>
+<li>To Image (GLSL)</li>
 </ul>
 <p>Produces a high resolution screenshot of the view.</p>
 <img alt="../../_images/rimg.png" src="../../_images/rimg.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Width</p></td>
-<td><p>Width of the image (maximum 16k)</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Width</td>
+<td>Width of the image (maximum 16k)</td>
 </tr>
-<tr class="row-odd"><td><p>Height</p></td>
-<td><p>Height of the image (maximum 16k)</p></td>
+<tr class="row-odd"><td>Height</td>
+<td>Height of the image (maximum 16k)</td>
 </tr>
-<tr class="row-even"><td><p>Slices</p></td>
-<td><p>Render in parts, improves render speed when the image resolution is very large</p></td>
+<tr class="row-even"><td>Slices</td>
+<td>Render in parts, improves render speed when the image resolution is very large</td>
 </tr>
-<tr class="row-odd"><td><p>MSAA</p></td>
-<td><p>Averages the final image over 4 samples. Slower but more beautiful.</p></td>
+<tr class="row-odd"><td>MSAA</td>
+<td>Averages the final image over 4 samples. Slower but more beautiful.</td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>To Video (GLSL)</p></li>
+<li>To Video (GLSL)</li>
 </ul>
 <p>Produces a high resolution screenshot video of the animation playback.</p>
 <img alt="../../_images/rmov.png" src="../../_images/rmov.png" />
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Option</p></th>
-<th class="head"><p>Details</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Details</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>Format</p></td>
-<td><p>Video format (GIF / AVI / PNG sequence)</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>Format</td>
+<td>Video format (GIF / AVI / PNG sequence)</td>
 </tr>
-<tr class="row-odd"><td><p>Width</p></td>
-<td><p>Width of the video (maximum 16k)</p></td>
+<tr class="row-odd"><td>Width</td>
+<td>Width of the video (maximum 16k)</td>
 </tr>
-<tr class="row-even"><td><p>Height</p></td>
-<td><p>Height of the video (maximum 16k)</p></td>
+<tr class="row-even"><td>Height</td>
+<td>Height of the video (maximum 16k)</td>
 </tr>
-<tr class="row-odd"><td><p>Slices</p></td>
-<td><p>Render in parts, improves render speed when the video resolution is very large</p></td>
+<tr class="row-odd"><td>Slices</td>
+<td>Render in parts, improves render speed when the video resolution is very large</td>
 </tr>
-<tr class="row-even"><td><p>MSAA</p></td>
-<td><p>Averages the final image over 4 samples. Slower but more beautiful.</p></td>
+<tr class="row-even"><td>MSAA</td>
+<td>Averages the final image over 4 samples. Slower but more beautiful.</td>
 </tr>
-<tr class="row-odd"><td><p>Max Frames</p></td>
-<td><p>Maximum frames to render. Snapshots will be skipped if there are too many frames.</p></td>
+<tr class="row-odd"><td>Max Frames</td>
+<td>Maximum frames to render. Snapshots will be skipped if there are too many frames.</td>
 </tr>
 </tbody>
 </table>
@@ -654,7 +652,7 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
         <a href="../anl/index.html" class="btn btn-neutral float-right" title="Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mainwin.html" class="btn btn-neutral float-left" title="Visualization Window" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mainwin.html" class="btn btn-neutral" title="Visualization Window" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -680,16 +678,26 @@ Attributes can be filled with the <code class="docutils literal notranslate"><sp
   
 
 
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

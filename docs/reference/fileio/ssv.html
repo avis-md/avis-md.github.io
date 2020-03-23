@@ -17,36 +17,34 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
+
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Visualization" href="../vis/index.html" />
     <link rel="prev" title="Importing Files" href="openfile.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -181,87 +179,87 @@ There can be an arbitrary number of spaces between values, but there should be n
 </pre></div>
 </div>
 <p>Available definitions are as follows:</p>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 27%" />
-<col style="width: 34%" />
-<col style="width: 39%" />
+<col width="27%" />
+<col width="34%" />
+<col width="39%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Format</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+<th class="head">Format</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>id</p></td>
-<td><p>atom id</p></td>
-<td><p>integer</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>atom id</td>
+<td>integer</td>
 </tr>
-<tr class="row-odd"><td><p>type</p></td>
-<td><p>atom type</p></td>
-<td><p>char</p></td>
+<tr class="row-odd"><td>type</td>
+<td>atom type</td>
+<td>char</td>
 </tr>
-<tr class="row-even"><td><p>name</p></td>
-<td><p>atom name</p></td>
-<td><p>string</p></td>
+<tr class="row-even"><td>name</td>
+<td>atom name</td>
+<td>string</td>
 </tr>
-<tr class="row-odd"><td><p>resid</p></td>
-<td><p>residue id</p></td>
-<td><p>integer</p></td>
+<tr class="row-odd"><td>resid</td>
+<td>residue id</td>
+<td>integer</td>
 </tr>
-<tr class="row-even"><td><p>resnm</p></td>
-<td><p>residue name</p></td>
-<td><p>string</p></td>
+<tr class="row-even"><td>resnm</td>
+<td>residue name</td>
+<td>string</td>
 </tr>
-<tr class="row-odd"><td><p>posx</p></td>
-<td><p>x coordinate</p></td>
-<td><p>double</p></td>
+<tr class="row-odd"><td>posx</td>
+<td>x coordinate</td>
+<td>double</td>
 </tr>
-<tr class="row-even"><td><p>posy</p></td>
-<td><p>y coordinate</p></td>
-<td><p>double</p></td>
+<tr class="row-even"><td>posy</td>
+<td>y coordinate</td>
+<td>double</td>
 </tr>
-<tr class="row-odd"><td><p>posz</p></td>
-<td><p>z coordinate</p></td>
-<td><p>double</p></td>
+<tr class="row-odd"><td>posz</td>
+<td>z coordinate</td>
+<td>double</td>
 </tr>
-<tr class="row-even"><td><p>velx</p></td>
-<td><p>x velocity</p></td>
-<td><p>double</p></td>
+<tr class="row-even"><td>velx</td>
+<td>x velocity</td>
+<td>double</td>
 </tr>
-<tr class="row-odd"><td><p>vely</p></td>
-<td><p>y velocity</p></td>
-<td><p>double</p></td>
+<tr class="row-odd"><td>vely</td>
+<td>y velocity</td>
+<td>double</td>
 </tr>
-<tr class="row-even"><td><p>velz</p></td>
-<td><p>z velocity</p></td>
-<td><p>double</p></td>
+<tr class="row-even"><td>velz</td>
+<td>z velocity</td>
+<td>double</td>
 </tr>
-<tr class="row-odd"><td><p>attr=[name]</p></td>
-<td><p>attribute</p></td>
-<td><p>double</p></td>
+<tr class="row-odd"><td>attr=[name]</td>
+<td>attribute</td>
+<td>double</td>
 </tr>
-<tr class="row-even"><td><p>ignore</p></td>
-<td><p>none</p></td>
-<td><p>any</p></td>
+<tr class="row-even"><td>ignore</td>
+<td>none</td>
+<td>any</td>
 </tr>
 </tbody>
 </table>
 <p>The <code class="docutils literal notranslate"><span class="pre">attr</span></code> entry imports the array as an attribute. Special attributes that are automatically assigned if used are as follows:</p>
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 47%" />
-<col style="width: 53%" />
+<col width="47%" />
+<col width="53%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>rotx, roty, rotz</p></td>
-<td><p>Orientation axes</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>rotx, roty, rotz</td>
+<td>Orientation axes</td>
 </tr>
 </tbody>
 </table>
@@ -286,7 +284,7 @@ There can be an arbitrary number of spaces between values, but there should be n
         <a href="../vis/index.html" class="btn btn-neutral float-right" title="Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="openfile.html" class="btn btn-neutral float-left" title="Importing Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="openfile.html" class="btn btn-neutral" title="Importing Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -312,16 +310,26 @@ There can be an arbitrary number of spaces between values, but there should be n
   
 
 
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

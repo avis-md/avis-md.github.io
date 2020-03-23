@@ -17,36 +17,34 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
+
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Generic SSV Format" href="ssv.html" />
     <link rel="prev" title="File I/O" href="index.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -181,13 +179,13 @@ Only a single configuration can be loaded at once.</p>
 <a class="reference internal image-reference" href="../../_images/icfg.png"><img alt="../../_images/icfg.png" class="align-center" src="../../_images/icfg.png" style="width: 50%;" /></a>
 <p>To open a configuration file, either:</p>
 <ul class="simple">
-<li><p>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></p></li>
-<li><p>Drag and drop the file onto the application window <cite>, or</cite></p></li>
-<li><p>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_file</span></code> on a terminal</p></li>
+<li>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></li>
+<li>Drag and drop the file onto the application window <cite>, or</cite></li>
+<li>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_file</span></code> on a terminal</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>), Protein Database(<code class="docutils literal notranslate"><span class="pre">.pdb</span></code>), Lammps(<code class="docutils literal notranslate"><span class="pre">.atom</span></code>), DlPoly(<code class="docutils literal notranslate"><span class="pre">.000</span></code>)</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>), Protein Database(<code class="docutils literal notranslate"><span class="pre">.pdb</span></code>), Lammps(<code class="docutils literal notranslate"><span class="pre">.atom</span></code>), DlPoly(<code class="docutils literal notranslate"><span class="pre">.000</span></code>)</p>
 </div>
 </div>
 <div class="section" id="importing-trajectories">
@@ -198,18 +196,18 @@ The format of the configuration and trajectory files need not be the same; but t
 Only a single trajectory can be loaded at once.</p>
 <p>To open a trajectory file:</p>
 <ul class="simple">
-<li><p>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></p></li>
-<li><p>Drag and drop the file onto the application window <cite>, or</cite></p></li>
-<li><p>From the bottom animation bar, select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Trajectory</span></code> <cite>, or</cite></p></li>
-<li><p>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_configuration_file</span> <span class="pre">name_of_trajectory_file</span></code> on a terminal</p></li>
+<li>From the top menu, select <code class="docutils literal notranslate"><span class="pre">File/Import</span></code> <cite>, or</cite></li>
+<li>Drag and drop the file onto the application window <cite>, or</cite></li>
+<li>From the bottom animation bar, select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Trajectory</span></code> <cite>, or</cite></li>
+<li>If the program is on PATH, execute <code class="docutils literal notranslate"><span class="pre">avis</span> <span class="pre">name_of_configuration_file</span> <span class="pre">name_of_trajectory_file</span></code> on a terminal</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.trr</span></code>)</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.trr</span></code>)</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some formats may contain trajectory data together with the configuration file.
+<p class="first admonition-title">Note</p>
+<p class="last">Some formats may contain trajectory data together with the configuration file.
 They may be loaded automatically without this step.</p>
 </div>
 <div class="section" id="incremental-loading">
@@ -219,15 +217,15 @@ The total number of frames to load into memory can be set in the <code class="do
 <p>To open an incremental trajectory, simply open the <strong>first</strong> file as the configuration file.
 Consecutive frames will be automatically detected and imported. <cite>Do not open / drag-and-drop all the files!</cite></p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>)</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Currently supported formats: Gromacs(<code class="docutils literal notranslate"><span class="pre">.gro</span></code>), CDView(<code class="docutils literal notranslate"><span class="pre">.cdv</span></code>)</p>
 </div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="first admonition-title">Important</p>
 <p>To allow for incremental loading, every filename must have matching formats with an incrementing number at the end.
 The number of figures of the number must be constant. The number may increment by more than 1 every frame, but the rate must be constant.</p>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mytrajfile000001</span><span class="o">.</span><span class="n">abc</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mytrajfile000001</span><span class="o">.</span><span class="n">abc</span>
 <span class="n">mytrajfile000003</span><span class="o">.</span><span class="n">abc</span>
 <span class="n">mytrajfile000005</span><span class="o">.</span><span class="n">abc</span>
 <span class="o">...</span>
@@ -261,7 +259,7 @@ the playback will be slower as they are fetched on-the-fly.</p>
         <a href="ssv.html" class="btn btn-neutral float-right" title="Generic SSV Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="File I/O" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="File I/O" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -287,16 +285,26 @@ the playback will be slower as they are fetched on-the-fly.</p>
   
 
 
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
